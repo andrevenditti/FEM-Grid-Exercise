@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+/*title of all sections content*/
+#title-content { 
+    margin-left: 40px;
+    text-shadow: 3px 0px rgba(0, 0, 0, 0.3);
+    text-transform: lowercase;
+    font-size: 40px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Fixed content style*/
+#fixed-content {
+    margin: 10px 0px 20px 40px;
+    background-color: #eee;
+    width: calc(350px + 100px + 2em);
+}
+.fixed-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 4px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px 30px 30px 30px;
+    background-color: #ddd;
+}
+/*Dimension of the images inside fixed content*/
+.img-dim-fix{
+    width: 100px;
+    height: 100px;
+}
+/*Fixed ends here!!*/
+
+/*Fluid content style*/
+#fluid-content{
+    margin: 10px 0px 20px 40px;
+    background-color: #eee;
+    max-width: 100%;
+}
+.fluid-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.25em;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px 30px 30px 30px;
+    background-color: #ddd;
+}
+/*Dimension of the images inside fluid content*/
+.img-dim-fl { 
+    width: 100%;
+    height: 100%;
+}
+/*Fluid ends here!!*/
+
+/*Responsive content style*/
+#rspv-content{
+    margin: 10px 0px 20px 40px;
+    background-color: #eee;
+    max-width: 100%;
+}
+.rspv-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 0.25em;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px 30px 30px 30px;
+    background-color: #ddd;
+}
+/*Dimension of the images inside responsive content*/
+.img-dim-rspv { 
+    width: 100%;
+    height: 100%;
+}
+/*media queries from reponsive content*/
+@media all and (max-width:1200px) and (min-width:1000px){
+    .rspv-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media all and (max-width:999px) and (min-width:700px){
+    .rspv-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media all and (max-width:699px) and (min-width:500px){
+    .rspv-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media all and (max-width:499px) and (min-width:0px){
+    .rspv-list{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/*Responsive content ends here!!*/
+
+/*Explicity placed style*/
+#exp-content{
+    margin: 10px 0px 20px 40px;
+    background-color: #eee;
+    max-width: 100%;
+}
+.exp-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px 30px 30px 30px;
+    background-color: #ddd;
+}
+/*Images distribution on content*/
+.exp-list li:nth-of-type(1){
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+}
+.exp-list li:nth-of-type(2){
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.exp-list li:nth-of-type(3){
+    grid-row: 3 / 4;
+    grid-column: 4 / 5;
+}
+.exp-list li:nth-of-type(4){
+    grid-row: 4 / 5 ;
+    grid-column: 2 / 3 ;
+}
+.exp-list li:nth-of-type(5){
+    grid-row: 5 / 6;
+    grid-column: 5 / 6;
+}
+/*Dimension of the images inside explicity content*/
+.img-dim-exp { 
+    width: 100%;
+    height: 100%;
+}
+/*Explicity ends here!!*/
+
+/*Overlapping-ratio-based-array style*/
+#ovr-rto-content{
+    margin: 10px 0px 20px 40px;
+    background-color: #eee;
+    width: calc(600px + 200px + 2em);
+    height: 100%;
+}
+.ovr-rto-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 100px 100px 100px 150px 100px;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 30px 30px 30px 30px;
+    background-color: #ddd;
+}
+/*elements position*/
+.ovr-rto-list li:nth-of-type(1){
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+}
+.ovr-rto-list li:nth-of-type(2){
+    grid-row: 3 / 5;
+    grid-column: 3 / 5;
+}
+.ovr-rto-list li:nth-of-type(3){
+    grid-row: 4/ 6;
+    grid-column: 4 / 6;
+}
+/*images dimension*/
+.img-dim-ovr-rto.pic1 { 
+    width: 230px;
+    height: 230px;
+}
+.img-dim-ovr-rto.pic2 { 
+    width: 210px;
+    height: 210px;
+}
+.img-dim-ovr-rto.pic3 { 
+    width: 280px;
+    height: 250px;
+}
+/*Overlapping-ratio-based-array ends here!!*/
+/*That's all folks*/
